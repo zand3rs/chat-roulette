@@ -1,0 +1,58 @@
+Chat Roulette Protocol
+======================
+
+Request:
+/connect
+{"nickname":"<nickname>"}
+
+Response:
+{"session_id":"<nickname>-<YYYYMMDDhhmmss>"}
+
+--------------------------------------------------------------------------------
+
+Request:
+/disconnect
+{"session_id":"<session_id>"}
+
+Response:
+200 OK
+
+--------------------------------------------------------------------------------
+
+Request:
+/send
+{
+    "session_id":"<session_id>",
+    "message":{"to":"<nickname>","text":"<message>"}
+}
+
+Response:
+200 OK
+
+--------------------------------------------------------------------------------
+
+Request:
+/recv
+{"session_id":"<session_id>"}
+
+Response:
+200 OK
+
+or
+
+{"presence":{"from":"<nickname>","type":"[online|offline]"}}
+
+or
+
+{"message":{"from":"<nickname>","text":"<message>","ts":"<YYYY-MM-DD hh:mm:ss>"}}
+
+--------------------------------------------------------------------------------
+
+Request:
+/search
+{"session_id":"<session_id>"}
+
+Response:
+200 OK
+
+

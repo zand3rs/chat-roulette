@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chat Roulette</title>
+<link rel="stylesheet" href="css/chat.css" type="text/css" />
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.timers.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>
+</head>
+
+<body>
+<div class="title"><h1>Chat Roulette</h1></div>
+<div class="wrap1">
+    <form method="get" name="formChat" id="formChat">
+          <div class="form_lcol">
+              Nickname: <input type="text" name="txtNickname" id="txtNickname" class="sendToFrom"/>
+          </div>
+          <div class="form_rcol">
+              <input type="button" name="btnExec" id="btnExec" value="Connect" />   
+          </div>
+    </form>
+</div>
+<div class="wrap2">
+        <div class="head"><span id="spanSession">Status</span> : <span id="spanStatus"></span></div>    
+        <div class="conv">
+        </div>    
+        <div class="head">
+            <input type="button" name="btnSearch" id="btnSearch" value="To:" disabled/>
+            <input type="text" name="txtTo" id="txtTo" class="sendToFrom" readonly/>
+            <span style="float:right"><input type="button" name="btnClear" id="btnClear" value="Clear"/></span>
+        </div>
+        <div class="sendBox">
+            <span><textarea name="txtMessage" id="txtMessage" class="sendMsg" disabled></textarea></span>
+            <span style="float:right"><input type="button" name="btnSend" id="btnSend" value="Send" disabled/></span>
+        </div>    
+</div>
+
+</body>
+
+</html>
